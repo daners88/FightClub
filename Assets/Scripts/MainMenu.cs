@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour {
 
     public void StartGame()
     {
-        SceneManager.LoadScene("FightClub", LoadSceneMode.Single);
+        SceneManager.LoadScene("CharacterSelect", LoadSceneMode.Single);
     }
 
     public void QuitGame()
