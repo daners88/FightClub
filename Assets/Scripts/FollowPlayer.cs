@@ -9,7 +9,7 @@ public class FollowPlayer : MonoBehaviour {
     private GameObject Player; 
 	// Use this for initialization
 	void Start () {
-        Player = GameObject.Find("VrCamera");
+        Player = GameObject.Find("swat:Hips");
 	}
 	
 	// Update is called once per frame
