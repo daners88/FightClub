@@ -1286,6 +1286,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cd43497dbba9d546a74d8946af52fc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character1: {fileID: 1341198098}
+  character2: {fileID: 706333288}
+  character3: {fileID: 336360833}
+  character4: {fileID: 532795997}
+  character5: {fileID: 1319081707}
+  character6: {fileID: 1708682173}
 --- !u!1 &1319081707
 GameObject:
   m_ObjectHideFlags: 0
