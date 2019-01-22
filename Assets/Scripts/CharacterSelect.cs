@@ -89,6 +89,6 @@ public class CharacterSelect : MonoBehaviour {
 
     public void confirm()
     {
-        SceneManager.LoadScene("FightClub", LoadSceneMode.Single);
+        SceneManager.LoadScene("John", LoadSceneMode.Single);
     }
 }
