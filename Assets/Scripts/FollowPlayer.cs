@@ -9,7 +9,7 @@ public class FollowPlayer : MonoBehaviour {
     private GameObject Player; 
 	// Use this for initialization
 	void Start () {
-        Player = GameObject.Find("swat:Hips");
+        Player = GameObject.Find("Ryan");
 	}
 	
 	// Update is called once per frame
