@@ -8,7 +8,7 @@ public class RandomMovement : MonoBehaviour {
     public float minDist = 3;
     GameObject randomSpot;
     GameObject originalSpot;
-    float randx, randy = 1, randz;
+    float randx, randy = 0, randz;
     bool flag;
     // Use this for initialization
     void Start () {
