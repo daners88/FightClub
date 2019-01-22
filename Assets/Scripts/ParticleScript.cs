@@ -14,9 +14,9 @@ public class ParticleScript : MonoBehaviour {
 		
 	}
 
-    public void EmissionCaller(Collision col)
+    public void EmissionCaller(Vector3 col)
     {
-        transform.position = col.contacts[0].point;
+        transform.position = col;
         GetComponent<ParticleSystem>().Play(true);
     }
 }

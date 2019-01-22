@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour {
             if (col.relativeVelocity.magnitude > hitStrength)
             {
                 print("ya boi got hit");
-                particleHit.GetComponent<ParticleScript>().EmissionCaller(col);
+                //particleHit.GetComponent<ParticleScript>().EmissionCaller(col);
             }
             else
             {

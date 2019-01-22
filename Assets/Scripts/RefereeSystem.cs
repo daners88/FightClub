@@ -35,6 +35,7 @@ public class RefereeSystem : MonoBehaviour {
             {
                 if(weapon.GetComponent<BoxCollider>().bounds.Intersects(vulnerable.GetComponent<BoxCollider>().bounds))
                 {
+                    particleHit.GetComponent<ParticleScript>().EmissionCaller(weapon.GetComponent<BoxCollider>().bounds.ClosestPoint(vulnerable.GetComponent<BoxCollider>().bounds.center));
                     corrineStreak = 0;
                     PlayRandomSound();
 
@@ -68,29 +69,6 @@ public class RefereeSystem : MonoBehaviour {
         //        }
         //    }
         //}
-    }
-
-    private void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.name.Contains("mixamorig"))
-        {
-            if (col.relativeVelocity.magnitude > hitStrength)
-            {
-                print("ya boi got hit");
-                particleHit.GetComponent<ParticleScript>().EmissionCaller(col);
-            }
-            else
-            {
-                print("smol hit");
-            }
-        }
-
-        /*
-        if(enemyHp.value == 0)
-        {
-            transform.position = new Vector3(4.5f, 4.5f, -5f);
-            enemyHp.value = 1000;
-        }*/
     }
 
     void ChangeHealth()
