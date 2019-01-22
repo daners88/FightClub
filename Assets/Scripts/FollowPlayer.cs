@@ -16,7 +16,16 @@ public class FollowPlayer : MonoBehaviour {
 	void Update () {
         if(Vector3.Distance(transform.position, Player.transform.position) > minDist)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime);
+            if(Vector3.Distance(transform.position, Player.transform.position) > 5)
+            {
+                speed = 5;
+            }
+            else
+            {
+                speed = 2;
+            }
+            transform.position = Vector3.MoveTowards(transform.position, Player.transform.position + new Vector3(0,2f,0), speed * Time.deltaTime);
+            print(Vector3.Distance(transform.position, Player.transform.position));
         }
 	}
 }
