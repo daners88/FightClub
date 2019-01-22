@@ -6,10 +6,9 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour {
 
     public float hitStrength = 6;
-    private Slider enemyHp;
+    public GameObject particleHit;
 	// Use this for initialization
 	void Start () {
-        enemyHp = GameObject.Find("EnemyHpSlider").GetComponent<Slider>();
 	}
 	
 	// Update is called once per frame
@@ -24,20 +23,19 @@ public class Enemy : MonoBehaviour {
             if (col.relativeVelocity.magnitude > hitStrength)
             {
                 print("ya boi got hit");
-                gameObject.GetComponentInChildren<ParticleScript>().EmissionCaller(col);
-                enemyHp.value -= 100;
+                particleHit.GetComponent<ParticleScript>().EmissionCaller(col);
             }
             else
             {
                 print("smol hit");
-                enemyHp.value -= 1;
             }
         }
 
+        /*
         if(enemyHp.value == 0)
         {
             transform.position = new Vector3(4.5f, 4.5f, -5f);
             enemyHp.value = 1000;
-        }
+        }*/
     }
 }
