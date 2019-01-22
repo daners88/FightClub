@@ -16,6 +16,7 @@ public class GetVRObjectIndex : MonoBehaviour {
             OpenVR.System.GetStringTrackedDeviceProperty(i, ETrackedDeviceProperty.Prop_ControllerType_String, result, 64, ref error);
             if (result.ToString().Contains(trackerStr))
             {
+                print(result);
                 index = i;
                 break;
             }

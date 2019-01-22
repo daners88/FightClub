@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour {
 
     private void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.name.Contains("swat"))
+        if(col.gameObject.name.Contains("mixamorig"))
         {
             if (col.relativeVelocity.magnitude > hitStrength)
             {
