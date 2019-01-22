@@ -15,6 +15,7 @@ public class GetCorrectController : MonoBehaviour {
         {
             index = rightIndex;
         }
+        print(index);
         GetComponent<SteamVR_TrackedObject>().index = (SteamVR_TrackedObject.EIndex)index;
     }
 	
