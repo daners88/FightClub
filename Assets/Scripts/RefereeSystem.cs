@@ -21,53 +21,77 @@ public class RefereeSystem : MonoBehaviour {
     public float hitStrength = 6;
     public GameObject particleHit;
 
+    float p1LastHit, p2LastHit;
+    bool p1CanHit, p2CanHit;
+
 
     // Use this for initialization
     void Start () {
-
+        p1LastHit = Time.time;
+        p1CanHit = true;
+        p2LastHit = Time.time;
+        p2CanHit = true;
     }
 	
 	// Update is called once per frame
 	void Update () {
-		foreach(var weapon in player1Weapons)
+        if(p1CanHit)
         {
-            foreach(var vulnerable in player2Vulnerables)
+            foreach (var weapon in player1Weapons)
             {
-                if(weapon.GetComponent<BoxCollider>().bounds.Intersects(vulnerable.GetComponent<BoxCollider>().bounds))
+                foreach (var vulnerable in player2Vulnerables)
                 {
-                    particleHit.GetComponent<ParticleScript>().EmissionCaller(weapon.GetComponent<BoxCollider>().bounds.ClosestPoint(vulnerable.GetComponent<BoxCollider>().bounds.center));
-                    corrineStreak = 0;
-                    PlayRandomSound();
+                    if (weapon.GetComponent<BoxCollider>().bounds.Intersects(vulnerable.GetComponent<BoxCollider>().bounds))
+                    {
+                        particleHit.GetComponent<ParticleScript>().EmissionCaller(weapon.GetComponent<BoxCollider>().bounds.ClosestPoint(vulnerable.GetComponent<BoxCollider>().bounds.center));
+                        corrineStreak = 0;
+                        PlayRandomSound();
 
-                    p2CurrentHealth -= 10;
+                        p2CurrentHealth -= 10;
 
-                    
-                    ChangeHealth();
+
+                        ChangeHealth();
+                        p1CanHit = false;
+                        p1LastHit = Time.time;
+                    }
                 }
-            }   
+            }
+        }
+        else if(Time.time - p1LastHit > 1)
+        {
+            p1CanHit = true;
         }
 
-        //foreach (var weapon in player2Weapons)
+        //if(p2CanHit)
         //{
-        //    foreach (var vulnerable in player1Vulnerables)
+        //    foreach (var weapon in player2Weapons)
         //    {
-        //        if (weapon.GetComponent<BoxCollider>().bounds.Intersects(vulnerable.GetComponent<BoxCollider>().bounds))
+        //        foreach (var vulnerable in player1Vulnerables)
         //        {
-        //            corrineStreak++;
-        //            if(corrineStreak > 3)
+        //            if (weapon.GetComponent<BoxCollider>().bounds.Intersects(vulnerable.GetComponent<BoxCollider>().bounds))
         //            {
-        //                catty.Play();
-        //            }
-        //            else
-        //            {
-        //                PlayRandomSound();
-        //            }
+        //                corrineStreak++;
+        //                if (corrineStreak > 3)
+        //                {
+        //                    catty.Play();
+        //                }
+        //                else
+        //                {
+        //                    PlayRandomSound();
+        //                }
 
-        //            p1CurrentHealth -= 10;
-                    
-        //            ChangeHealth();
+        //                p1CurrentHealth -= 10;
+
+        //                ChangeHealth();
+        //                p2CanHit = false;
+        //                p2LastHit = Time.time;
+        //            }
         //        }
         //    }
+        //}
+        //else if (Time.time - p2LastHit > 1)
+        //{
+        //    p2CanHit = true;
         //}
     }
 
