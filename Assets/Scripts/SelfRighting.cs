@@ -5,8 +5,8 @@ using UnityEngine;
 public class SelfRighting : MonoBehaviour {
 
     private Rigidbody rBody;
-    private float force = 5;
-    private float offset = 2;
+    public float force = 5;
+    public float offset = 2;
 	// Use this for initialization
 	void Start () {
         rBody = GetComponent<Rigidbody>();
