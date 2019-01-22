@@ -432,7 +432,7 @@ Prefab:
     - target: {fileID: 198371161829085400, guid: cc2bc3a0f25800b4b92554e4d517fba9,
         type: 2}
       propertyPath: ShapeModule.angle
-      value: 15.29
+      value: 9.71
       objectReference: {fileID: 0}
     - target: {fileID: 198371161829085400, guid: cc2bc3a0f25800b4b92554e4d517fba9,
         type: 2}
@@ -477,7 +477,7 @@ Prefab:
     - target: {fileID: 198371161829085400, guid: cc2bc3a0f25800b4b92554e4d517fba9,
         type: 2}
       propertyPath: InitialModule.startSize.scalar
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 198371161829085400, guid: cc2bc3a0f25800b4b92554e4d517fba9,
         type: 2}
@@ -527,12 +527,12 @@ Prefab:
     - target: {fileID: 198371161829085400, guid: cc2bc3a0f25800b4b92554e4d517fba9,
         type: 2}
       propertyPath: RotationModule.curve.scalar
-      value: -6.283185
+      value: -12.56637
       objectReference: {fileID: 0}
     - target: {fileID: 198371161829085400, guid: cc2bc3a0f25800b4b92554e4d517fba9,
         type: 2}
       propertyPath: RotationModule.curve.minScalar
-      value: 6.283185
+      value: 12.56637
       objectReference: {fileID: 0}
     - target: {fileID: 198371161829085400, guid: cc2bc3a0f25800b4b92554e4d517fba9,
         type: 2}
@@ -636,7 +636,7 @@ Prefab:
     - target: {fileID: 198371161829085400, guid: cc2bc3a0f25800b4b92554e4d517fba9,
         type: 2}
       propertyPath: InitialModule.startSize.minScalar
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 199230894580136298, guid: cc2bc3a0f25800b4b92554e4d517fba9,
         type: 2}
@@ -657,6 +657,16 @@ Prefab:
         type: 2}
       propertyPath: NoiseModule.frequency
       value: 8.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 198371161829085400, guid: cc2bc3a0f25800b4b92554e4d517fba9,
+        type: 2}
+      propertyPath: TrailModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198371161829085400, guid: cc2bc3a0f25800b4b92554e4d517fba9,
+        type: 2}
+      propertyPath: TrailModule.mode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc2bc3a0f25800b4b92554e4d517fba9, type: 2}
@@ -5763,7 +5773,7 @@ Prefab:
     - target: {fileID: 198371161829085400, guid: cc2bc3a0f25800b4b92554e4d517fba9,
         type: 2}
       propertyPath: ShapeModule.angle
-      value: 15.29
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 198371161829085400, guid: cc2bc3a0f25800b4b92554e4d517fba9,
         type: 2}
@@ -5808,7 +5818,7 @@ Prefab:
     - target: {fileID: 198371161829085400, guid: cc2bc3a0f25800b4b92554e4d517fba9,
         type: 2}
       propertyPath: InitialModule.startSize.scalar
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 198371161829085400, guid: cc2bc3a0f25800b4b92554e4d517fba9,
         type: 2}
@@ -5967,7 +5977,7 @@ Prefab:
     - target: {fileID: 198371161829085400, guid: cc2bc3a0f25800b4b92554e4d517fba9,
         type: 2}
       propertyPath: InitialModule.startSize.minScalar
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 199230894580136298, guid: cc2bc3a0f25800b4b92554e4d517fba9,
         type: 2}
