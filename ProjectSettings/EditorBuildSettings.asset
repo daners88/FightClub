@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CharacterSelect.unity
     guid: 0dcd23de6e91d274786a8e995f889214
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FightClub.unity
     guid: 58828332f26257a4499531ef9cc9e0fb
+  - enabled: 1
+    path: Assets/Scenes/John.unity
+    guid: d6a94a92f8e4d0243a505c7b7fe4fe07
   m_configObjects: {}

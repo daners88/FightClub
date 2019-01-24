@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RefereeSystem : MonoBehaviour {
     public List<GameObject> player1Vulnerables;
@@ -35,6 +36,10 @@ public class RefereeSystem : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        }
         if(p1CanHit)
         {
             foreach (var weapon in player1Weapons)
